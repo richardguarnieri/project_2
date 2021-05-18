@@ -8,7 +8,7 @@ const One = () => {
     const [genre, setGenre] = useState('');
     const [language, setLanguage] = useState('');
 
-    const herokuBackend = 'https://calm-bastion-68619.herokuapp.com'
+    const herokuBackend = 'https://itesm-project2-backend.herokuapp.com'
 
     useEffect(() => {
         const general = async () => {
