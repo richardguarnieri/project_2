@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-
-
+import * as d3 from 'd3';
 
 const One = () => {
 
@@ -10,25 +8,20 @@ const One = () => {
     const [genre, setGenre] = useState('');
     const [language, setLanguage] = useState('');
 
-    // const general = async () => {
-    //     const response = await fetch(`${$API}/all_movies/xxxxx`);
-    //     const data = await response.json();
-    //     console.log(data);
-    // };
-
-    const hello = () => {
-        console.log('hello world')
-    }
-
-    // const selected = async () => {
-    //     const response = await fetch(`${$API}/all_movies/${year}/${genre}/${language}`);
-    //     const data = await response.json();
-    //     console.log(data);
-    // };
+    const herokuBackend = 'https://calm-bastion-68619.herokuapp.com'
 
     useEffect(() => {
-        console.log('rendered')
-    }, [hello])
+        const general = async () => {
+            try {
+                const response = await fetch(`https://cors-anywhere.herokuapp.com/${herokuBackend}/filter/${genre}/${language}`);
+                const data = await response.json();
+                console.log(data);
+            } catch(err) {
+                console.log(err);
+            }
+        }
+        general();
+    }, [genre, language]);
 
 
     return (
@@ -57,8 +50,8 @@ const One = () => {
                         setGenre(e.target.value);
                     }}>
                         <option selected>Open this select menu</option>
-                        <option value="Genre 1">Genre 1</option>
-                        <option value="Genre 2">Genre 2</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
                         <option value="Genre 3">Genre 3</option>
                     </select>
                     <select id='language' className="form-select" aria-label="Default select example"
@@ -66,9 +59,9 @@ const One = () => {
                         setLanguage(e.target.value);
                     }}>
                         <option selected>Open this select menu</option>
-                        <option value="Language 1">Language 1</option>
-                        <option value="Language 2">Language 2</option>
-                        <option value="Language 3">Language 3</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
                     </select>
 
                     <hr></hr>

@@ -2,7 +2,6 @@
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Welcome from './components/Welcome';
-import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Data from './components/Data';
 import Visualizations from './components/Visualizations';
@@ -21,7 +20,7 @@ import './App.css';
 
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js'
+import 'bootstrap/dist/js/bootstrap.js';
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
           <>
             <Banner />
             <Welcome />
-            
           </>
         )} />
         <Route path='/data' component={Data} />
