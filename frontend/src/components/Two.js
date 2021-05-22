@@ -163,7 +163,7 @@ const Two = () => {
             .style("stroke", "white")
             .style("fill", function (d) { return color((d.children ? d : d.parent).data.name); });
         
-        let toolTip = d3.select(".holder");         
+        let toolTip = d3.select(".holder-tip");         
 
         // MouseOver event
         sunburstGroup.on("mouseover", function(d, i) {
@@ -226,7 +226,7 @@ const Two = () => {
                     </div>
 
                     <div id = "graph-section"></div>
-                    <div class="holder" style = {{display:"none"}} ></div>
+                    <div class="holder-tip" style = {{display:"none"}} ></div>
 
                 </div>
                 
