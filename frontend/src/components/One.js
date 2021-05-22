@@ -74,12 +74,10 @@ const One = () => {
 
 
 
-
                     <h2>CALL D3 CODE</h2>
 
 
-
-
+                    
                 </div>
                 <div className="d-flex justify-content-center pt-4">
                         <Link to="/visualizations" className="btn btn-dark btn-lg m-2">Back to Visualizations</Link>
