@@ -26,6 +26,7 @@ const Data = () => {
             filteredArray = filteredArray.filter(
                 entry => ((entry.genre_1.toLowerCase() === genre.toLowerCase()) && (entry.lang_1.toLowerCase() === language.toLowerCase()))
             );
+            filteredArray = filteredArray.sort((a, b) => b.avg_vote_f - a.avg_vote_f)
             filteredArray.forEach(d => {
                 let newRow = tbody.append('tr')
                     newRow.append('td').text(d.title)
