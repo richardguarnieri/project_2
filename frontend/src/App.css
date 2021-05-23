@@ -86,7 +86,7 @@ a {
 
 #myInput1:focus,#myInput2:focus,#myInput3:focus {outline: 3px solid #ddd;}
 
-.dropdown {
+.dropdownz {
   display: inline-block;
   margin: 0;
   position: absolute;
@@ -96,7 +96,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.dropdown-content {
+.dropdownz-content {
   display: none;
   position: absolute;
   background-color: #f6f6f6;
@@ -106,21 +106,33 @@ a {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdownz-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdownz a:hover {background-color: #ddd;}
 
 .show {display: block;}
 
-.active {
+.activez {
   font-weight: bold;
   fill: #000;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
   font-size: 24px;
+}
+
+.carousel-item{
+  width: 100%; /*width you want*/
+  height: 392.562px; /*height you want*/
+  overflow: hidden;
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
