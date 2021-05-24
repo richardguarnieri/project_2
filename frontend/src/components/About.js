@@ -11,7 +11,7 @@ const About = () => {
 <p className='fw-bold'>Sunburst Visualization:</p>
 <p>One of our visualizations shows a sunburst graph. This graph categorizes the top 10 movies from the selected year based on their genres. Each genre is shown in one color in the inner circle of the graph. The movie titles are shown in the outer circle of the graph and their color matches the genre they belong to.</p>
 <p className='fw-bold'>Bubble Visualization:</p>
-<p>Abc...</p>
+<p>In this visualization we show in bubbles the top 20 movies filtered in the options you choose of country, language and genre, it allows you to compare them with each other showing you their rating, year of realease and duration in a visual way.</p>
                     <p className="lead">Dataset information</p>
                     <p>The dataset was extracted from <b>Kaggle:</b> <a href="https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset" target='_blank' className="link-dark">https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset</a></p>
                     <p className="lead">Github Repo</p>
